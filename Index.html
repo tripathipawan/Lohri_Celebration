@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Lohri Celebration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- START SCREEN -->
+  <div class="start-screen">
+    <div class="start-content">
+      <h1 class="start-title">LOHRI CELEBRATION</h1>
+      <p class="start-subtitle">Experience the ultimate fusion of tradition and technology. Get ready for 3D fire
+        effects, village vibes, and punjabi beats!</p>
+      <button class="start-btn">🔥 ENTER THE VIBE</button>
+    </div>
+  </div>
+
+  <!-- TRANSITION SCREEN -->
+  <div class="transition-screen">
+    <div class="transition-text">WELCOME TO LOHRI!</div>
+  </div>
+
+  <!-- SVG FILTER -->
+  <svg width="0" height="0">
+    <filter id="heat">
+      <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" seed="2">
+        <animate attributeName="baseFrequency" dur="2s" values="0.01;0.02;0.01" repeatCount="indefinite" />
+      </feTurbulence>
+      <feDisplacementMap scale="20" in="SourceGraphic" />
+    </filter>
+  </svg>
+
+  <!-- MAIN SCENE -->
+  <div class="scene">
+    <!-- CURSOR FIRE -->
+    <div class="cursor-fire" id="cursorFire"></div>
+
+    <!-- CRACKER CONTAINER -->
+    <div class="cracker-container" id="crackerContainer"></div>
+
+    <!-- ENHANCED FIRE -->
+    <div class="fire-container" id="fireContainer">
+      <div class="fire" id="mainFire">
+        <div class="flame" id="flame1"></div>
+        <div class="flame" id="flame2"></div>
+        <div class="flame" id="flame3"></div>
+      </div>
+      <div class="logs">
+        <div class="log"></div>
+        <div class="log"></div>
+        <div class="log"></div>
+      </div>
+    </div>
+
+    <!-- IMPROVED VILLAGE HOUSES (5 houses with varying sizes) -->
+    <div class="village" id="village">
+      <div class="housebox">
+        <div class="house">
+          <div class="house-roof"></div>
+          <div class="house-body">
+            <div class="house-window"></div>
+            <div class="house-door"></div>
+          </div>
+        </div>
+        <div class="house">
+          <div class="house-roof"></div>
+          <div class="house-body">
+            <div class="house-window"></div>
+            <div class="house-door"></div>
+          </div>
+        </div>
+      </div>
+      <div class="housebox">
+        <div class="house">
+          <div class="house-roof"></div>
+          <div class="house-body">
+            <div class="house-window"></div>
+            <div class="house-door"></div>
+          </div>
+        </div>
+        <div class="house">
+          <div class="house-roof"></div>
+          <div class="house-body">
+            <div class="house-window"></div>
+            <div class="house-door"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STARS -->
+  <div class="stars" id="stars"></div>
+
+  <!-- GREETING TEXT -->
+  <div class="greeting-container" id="greetingContainer">
+    <h1 class="greeting-text">HAPPY LOHRI!</h1>
+    <div class="punjabi-greeting">ਲੋਹੜੀ ਦੀਆਂ ਲੱਖ ਲੱਖ ਵਧਾਈਆਂ!</div>
+    <div class="genz-text">Fire up the night! <span>#LohriVibes</span> <span>#PunjabiHeat</span></div>
+  </div>
+
+  <!-- WHEAT FIELDS -->
+  <div class="wheat"></div>
+
+  <!-- GRAIN EFFECT -->
+  <div class="grain"></div>
+
+  <!-- CONTROLS -->
+  <div class="controls">
+    <button class="control-btn" id="musicToggle">🎵 Music On</button>
+    <button class="control-btn" id="fireworksToggle">🎆 Fireworks On</button>
+    <button class="control-btn" id="crackersToggle">🧨 Crackers On</button>
+  </div>
+
+  <!-- FOOTER TEXT -->
+  <div class="footer-text">Celebrate the festival of fire and harvest • Made with ❤️ for Lohri • 2024</div>
+  </div>
+
+  <!-- BACKGROUND MUSIC -->
+  <audio id="backgroundMusic" loop>
+    <source src="../assets/firework.wav" type="audio/wav">
+  </audio>
+
+  <!-- DHOL BEATS -->
+  <audio id="dholBeats" loop>
+    <source src="../assets/Bhangra.mp3" type="audio/mp3">
+  </audio>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
